@@ -19,7 +19,7 @@ mobile_app - the tracking app, to be run on a GPS-enabled device. Sends location
 
 ###Server
 
-The server recieves the tracking data, sends it to all connected viewers, then stores the tracking data in the database.
+The server recieves the tracking data, sends it to all connected viewers.
 
 ###Viewer
 
