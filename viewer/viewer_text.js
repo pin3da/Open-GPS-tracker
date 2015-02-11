@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  // PUT HERE YOUR IP (socket server) !
+  var socketServer = 'http://192.168.1.32:8080';
   var socket = io.connect(socketServer);
 
   socket.emit('client');

@@ -19,6 +19,7 @@ io.sockets.on('connection', function (socket) {
 
         // emit data to clients
         io.sockets.in('clients').emit('sendfromserver', data);
+        console.log(data);
     });
 
     socket.on('runnerConnect', function (data){
