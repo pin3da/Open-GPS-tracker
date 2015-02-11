@@ -1,11 +1,15 @@
 Open GPS-tracker
 ========
 
-![Open GPS-tracker screenshot](http://i.imgur.com/nFvnm0F.png)
-
 Open GPS-tracker is a GPS-tracking-thing written in JavaScript. It is primarily built for tracking running events, but may be modified to track anything.
 
-It utilizes Node.js and WebSockets to communicate between the 'runners', server and viewers. MySQL is used for storage of track data.
+It utilizes Node.js and WebSockets to communicate between the 'runners', server and viewers.
+
+This project was forked from [Adrianod's Repository](https://github.com/Adrianod/Open-GPS-tracker) and aims:
+
+- Versioning dependencies.
+- Remove MySQL stuff.
+- Remove GoogleMaps-related visualization.
 
 ##Structure
 
@@ -19,21 +23,22 @@ The server recieves the tracking data, sends it to all connected viewers, then s
 
 ###Viewer
 
-The viewer gets data from the server via WebSockets and plots it on a map (Google Maps API).
+The viewer gets data from the server via WebSockets and show them as HTML.
+
+In the *near future* this data will be shown on OpenStreetMaps.
 
 ##Instructions
 
-What you need: Node.js & Socket.io, MySQL, web server.
+Dependencies:
+
+- NodeJS.
 
 ###Installation:
-- Edit `server/server.js` with your MySQL-details.
-- Create database as per `gpstracks.sql`.
 - Edit `mobile_app/app.js` with your socket.io-server.
-- Edit `mobile_app/index.html` with your socket.io-server.
-- Edit `viewer/viewer.html` with your socket.io-server.
-- Edit `viewer/viewer.js` with your socket.io-server. Take a look at line 275 for editing custom tile server.
+- Edit `viewer/viewer.js` with your socket.io-server.
+- Go to `server/` and run `npm install` to install dependencies.
 
 ###Tracking:
-1.  Start server with `node server.js`.
+1.  Start server with `npm start`.
 2.  Send someone for a walk with the mobile_app running.
 1.	Browse to `viewer.html` and hopefully you'll see the tracking goodness.

@@ -31,7 +31,7 @@ $(document).ready(function() {
         latlon.lon = position.coords.longitude;
         if(!position.coords.speed) { latlon.speed = 0; }
         else{ latlon.speed = position.coords.speed }
-        
+
         if(first) {
             intervalId = setInterval(send, 5000);
         }
@@ -79,7 +79,7 @@ $(document).ready(function() {
         }
     }
 
-    function errorHandler(err) { 
+    function errorHandler(err) {
         if(err.code == 1) {
             alert("Error: Access was denied");
         }
