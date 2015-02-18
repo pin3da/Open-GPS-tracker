@@ -1,0 +1,22 @@
+{
+  "name": "Open-gps-tracker2",
+  "version": "0.0.0",
+  "description": "\"Example of web-based tracking using open street maps\"",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "OSM",
+    "maps",
+    "gps",
+    "tracking"
+  ],
+  "author": "Manuel Pineda <manuel.felipe.pineda@gmail.com> (http://github.com/pin3da)",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.7.4",
+    "socket.io": "^1.3.4"
+  }
+}
